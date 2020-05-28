@@ -11,9 +11,9 @@ for i in range(100):
     
     point = []
     if sid == 0:
-        point = [2*(1-pos*2),l,pos]
+        point = [2*(1-pos*2),l,2*pos-1]
     else:
-        point = [l,-2*(1-pos*2),pos]
+        point = [l,-2*(1-pos*2),2*pos-1]
     
     db.append(point)
 

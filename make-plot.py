@@ -15,12 +15,12 @@ X_neg = []
 Y_neg = []
 
 for i in range(len(X)):
-    if label[i] == 0:
-        X_neg.append(X[i])
-        Y_neg.append(Y[i])
-    else:
+    if label[i] == 1:
         X_pos.append(X[i])
         Y_pos.append(Y[i])
+    else:
+        X_neg.append(X[i])
+        Y_neg.append(Y[i])
 
 plt.plot(X_pos,Y_pos,'bo')
 plt.plot(X_neg,Y_neg,'ro')
