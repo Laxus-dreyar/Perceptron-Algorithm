@@ -8,6 +8,7 @@ db = np.array(pickle.load(dbfile))
 w = np.array([0,0])
 b = 0
 count = 0
+ite = 0
 
 while True:
     i = random.randint(0,len(db)-1)
@@ -19,10 +20,14 @@ while True:
     else:
         count = count + 1
     
-    if count == 10000:
+    ite = ite + 1
+    
+    if count == 100000:
         break
 
-print(w)
+print("the value for w is : ", w)
+print("no of interations to converge: ", ite)
+
 X = db[:,:1]
 Y = db[:,1:2]
 label = db[:,2:3]
